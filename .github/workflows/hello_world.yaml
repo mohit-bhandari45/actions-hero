@@ -15,7 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: hello world
-        run: echo "Hello World by Mohit"
+        run: echo "Hello World by Mohit and Rohit"
         shell: bash
 
   goodbye:
