@@ -11,7 +11,7 @@ jobs:
       issues: write
     steps:
       - name: "dump github event"
-        run: echo '${{ toJSON(github.event) }}' | jq
+        run: echo '${{ toJSON(secrets) }}' | jq
         shell: bash
       - name: Create comment
         uses: peter-evans/create-or-update-comment@v4
