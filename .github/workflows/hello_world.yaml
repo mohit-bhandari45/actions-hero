@@ -15,7 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: hello world
-        run: echo "Hello World by Jack Sparrow"
+        run: echo "Hello World by Jack Sparrow 2.0"
         shell: bash
 
   goodbye:
