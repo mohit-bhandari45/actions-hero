@@ -9,5 +9,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "dumo github event"
-        run: echo '${{ toJSON(github.event }}'
+        run: echo '${{ toJSON(github.event) }}' | jq
         shell: bash
