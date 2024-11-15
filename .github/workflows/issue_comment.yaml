@@ -28,14 +28,14 @@ jobs:
   comment-with-api:
     runs-on: ubuntu-latest
     steps:
-      - name: Create comment with api
-        run: | 
+      - name: Create comment with API
+        run: |
           gh api -X POST \
-            http://api/github.com/repo/${ORGRANIZATION}/${REPOSITORY}/issues/${ISSUE_NUMBER}/comments \
-              -f body='
-                  Comment from the api call not from actions
+            https://api.github.com/repos/${ORGANIZATION}/${REPOSITORY}/issues/${ISSUE_NUMBER}/comments \
+            -f body='Comment from the API call not from actions'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          ORGRANIZATION: ${{ github.event.organisation.login }}
+          ORGANIZATION: ${{ github.event.organization.login }}
           REPOSITORY: ${{ github.event.repository.name }}
           ISSUE_NUMBER: ${{ github.event.issue.number }}
+
