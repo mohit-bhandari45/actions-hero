@@ -1,0 +1,13 @@
+name: Create comment on new issues
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  comment-action:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "dumo github event"
+        run: echo '${{ toJSON(github.event }}'
+        shell: bash
