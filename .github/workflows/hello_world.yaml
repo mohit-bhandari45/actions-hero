@@ -15,12 +15,12 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: hello world
-        run: echo "Hello World by Jack Sparrow 2.0"
+        run: echo "Hello World by Jack Sparrow 2.0 and Batman"
         shell: bash
 
   goodbye:
     runs-on: ubuntu-latest
     steps:
       - name: goodbye world
-        run: echo "Goodbye world by Jack Sparrow"
+        run: echo "Goodbye world by Jack Sparrow and Batman"
         shell: bash
